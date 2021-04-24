@@ -32,6 +32,7 @@ hello world!
 ### Native
 ```shell
 $ git clone https://github.com/Gorlah/spring-native-demo.git
+$ cd spring-native-demo
 $ ./mvnw -Pnative-image package
 $ target/app
 ```

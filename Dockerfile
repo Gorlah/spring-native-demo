@@ -6,7 +6,7 @@ COPY src /tmp/app/src
 COPY pom.xml /tmp/app
 ENV PATH="/opt/maven/bin:${PATH}"
 RUN gu install native-image
-RUN mvn -f /tmp/app/pom.xml -Pnative-image package
+RUN mvn -q -f /tmp/app/pom.xml -Pnative-image package
 
 FROM scratch
 COPY --from=build /tmp/app/target/app /

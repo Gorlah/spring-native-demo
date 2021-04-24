@@ -1,4 +1,4 @@
-# Spring Native Demo
+# Spring Native Demo [![Docker](https://github.com/Gorlah/spring-native-demo/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/Gorlah/spring-native-demo/actions/workflows/docker-publish.yml)
 
 This project uses `spring-native` to compile a Spring Boot application to a native executable with a quick startup time. Example:
 ```shell

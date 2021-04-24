@@ -16,6 +16,7 @@
     <properties>
         <java.version>11</java.version>
         <spring-native.version>0.9.2</spring-native.version>
+        <native-image.version>21.1.0</native-image.version>
     </properties>
     <dependencies>
         <dependency>
@@ -42,6 +43,12 @@
             <groupId>io.projectreactor</groupId>
             <artifactId>reactor-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.graalvm.nativeimage</groupId>
+            <artifactId>native-image-maven-plugin</artifactId>
+            <version>${native-image.version}</version>
+            <type>maven-plugin</type>
         </dependency>
     </dependencies>
 
@@ -117,7 +124,7 @@
                     <plugin>
                         <groupId>org.graalvm.nativeimage</groupId>
                         <artifactId>native-image-maven-plugin</artifactId>
-                        <version>21.0.0.2</version>
+                        <version>${native-image.version}</version>
                         <configuration>
                             <mainClass>com.gorlah.demo.SpringNativeDemoApplication</mainClass>
                             <buildArgs>--static -H:Name=app</buildArgs>
